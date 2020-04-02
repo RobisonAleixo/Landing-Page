@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.center {
+  max-width: 1200;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.hero nav {  
+  /* position: fixed; */
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px;
+  letter-spacing: 1px;
+}
+
+nav ul li:first-child {
+  color: #000;
+}
+
+.hero section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+
+.hero {
+  height: 550px;
+  background-image: linear-gradient(to right, rgba(0,172,217,0.62), rgba(105,240,174,0.52)), url(../../assets/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 6rem;
+  position: relative;
+}
+
+.hero::after {
+  background-color: #FFF;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  transform: skewY(-2deg);
+  transform-origin: bottom right;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.promote h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+
+.promote p {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  margin-top: 20px;
+}
+
+.promote button {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  padding: .5rem 2rem;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+
+.promote img {
+  position: relative;
+  z-index: 99;
+}
+
+/* ABOUT */
+
+.about {
+  position: relative;
+  margin-top: 40px;
+  z-index: 99;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #495057;
+}
+
+.about-apper {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.about-apper {
+  text-align: center;
+  color: #495057;
+}
+
+.about-apper h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.about-apper p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  
+}
