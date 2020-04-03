@@ -106,6 +106,7 @@ nav ul li:first-child {
   position: relative;
   margin-top: 40px;
   z-index: 99;
+  color: #495057;
 }
 
 .about h2 {
@@ -113,7 +114,6 @@ nav ul li:first-child {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  color: #495057;
 }
 
 .about-apper {
@@ -125,15 +125,67 @@ nav ul li:first-child {
 
 .about-apper {
   text-align: center;
-  color: #495057;
 }
 
 .about-apper h3 {
   text-transform: uppercase;
   font-size: 1.5rem;
+  margin: 10px 0px;
+  font-weight: 600;
 }
 .about-apper p {
   margin-top: 10px;
   font-size: 1.2rem;
-  
+}
+
+/* FEATURE */
+
+.features {
+  margin-top: 100px;
+  color: #495057;
+}
+
+.features h2, h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.features h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.app-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 280px);
+}
+
+
+.app-features img {
+  margin-bottom: 20px;
+}
+
+.app-features p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.device-img  {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.app-features article, .device-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
