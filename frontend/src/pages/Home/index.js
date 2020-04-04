@@ -11,7 +11,8 @@ import featureicon3Img from '../../assets/featureicon3.png';
 import featureicon4Img from '../../assets/featureicon4.png';
 import { GoGear, GoBell } from 'react-icons/go'
 import { IoMdPower } from 'react-icons/io'
- 
+import { FaApple, FaGooglePlay } from 'react-icons/fa'
+
 export default function Home() {
   return (
     <div>
@@ -34,8 +35,8 @@ export default function Home() {
             <div className="promote">
               <h3>Make your life easier with apper</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, suscipit esse! Tempore doloremque fugiat ex praesentium? Deserunt, assumenda. Quasi temporibus officia ex voluptas natus distinctio fuga, quod ipsa dolore quisquam?</p>
-              <button>buy now</button>
-              <button>try now</button>
+              <button className="btn btn-promote">buy now</button>
+              <button className="btn btn-promote">try now</button>
             </div>
             <div className="promote">
               <img src={deviceImg} alt="Device" />
@@ -48,7 +49,7 @@ export default function Home() {
       <section className="about">
         <div className="center">
 
-          <h2>About apper</h2>
+          <h2 className="title">About apper</h2>
           <div className="about-apper">
             <article>
               <GoGear size={55} color={"#56bbd5"} />
@@ -78,25 +79,25 @@ export default function Home() {
           <h2>app features</h2>
           <div className="app-features">
             <article>
-              <img src={featureicon1Img} alt=""/>
+              <img src={featureicon1Img} alt="" />
               <h3>mobile friendly</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure ullam aspernatur repudiandae incidunt quo odit hic odio asperiores sunt nihil eaque fuga necessitatibus reprehenderit deserunt illo earum, repellendus suscipit?</p>
             </article>
 
             <article>
-              <img src={featureicon2Img} alt=""/>
+              <img src={featureicon2Img} alt="" />
               <h3>security</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure ullam aspernatur repudiandae incidunt quo odit hic odio asperiores sunt nihil eaque fuga necessitatibus reprehenderit deserunt illo earum, repellendus suscipit?</p>
             </article>
 
             <article>
-              <img src={featureicon3Img} alt=""/>
+              <img src={featureicon3Img} alt="" />
               <h3>24/7 support</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure ullam aspernatur repudiandae incidunt quo odit hic odio asperiores sunt nihil eaque fuga necessitatibus reprehenderit deserunt illo earum, repellendus suscipit?</p>
             </article>
 
             <article>
-            <img src={featureicon4Img} alt=""/>
+              <img src={featureicon4Img} alt="" />
               <h3>beautiful design</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci iure ullam aspernatur repudiandae incidunt quo odit hic odio asperiores sunt nihil eaque fuga necessitatibus reprehenderit deserunt illo earum, repellendus suscipit?</p>
             </article>
@@ -105,6 +106,66 @@ export default function Home() {
               <img src={featureDeviceImg} alt="Feature Device" />
             </div>
 
+          </div>
+
+        </div>
+      </section>
+
+      <section className="download">
+        <div className="center">
+          <h2>download our app</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus modi libero natus saepe quis! Deserunt voluptatibus natus totam. Ipsa fugit distinctio officiis, quo veritatis eos doloremque dignissimos odio dolores quod!</p>
+          <div>
+            <button className="btn btn-download"><FaApple size={16} />App Store</button>
+            <button className="btn btn-download"><FaGooglePlay size={16} />Play Store</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="pricing-plans">
+        <h2>pricing plans</h2>
+        <div className="center">
+
+          <div className="plans">
+            <div className="plan-item">
+              <div className="header-plans">
+                <h3>basic</h3>
+                <p>$25/month</p>
+              </div>
+              <ul className="body-plans">
+                <li>free suport</li>
+                <li>20gb storage</li>
+                <li>2 users</li>
+                <li>2 email accounts</li>
+              </ul>
+              <button className="btn btn-plans">Order now</button>
+            </div>
+            <div className="plan-item">
+              <div className="header-plans sale">
+                <h3>medium</h3>
+                <p>$45/month</p>
+              </div>
+              <ul className="body-plans">
+                <li>free suport</li>
+                <li>20gb storage</li>
+                <li>2 users</li>
+                <li>2 email accounts</li>
+              </ul>
+              <button className="btn btn-plans">Order now</button>
+            </div>
+            <div className="plan-item">
+              <div className="header-plans">
+                <h3>large</h3>
+                <p>$125/month</p>
+              </div>
+              <ul className="body-plans">
+                <li>free suport</li>
+                <li>20gb storage</li>
+                <li>2 users</li>
+                <li>2 email accounts</li>
+              </ul>
+              <button className="btn btn-plans">Order now</button>
+            </div>
           </div>
 
         </div>
