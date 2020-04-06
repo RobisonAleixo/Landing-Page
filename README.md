@@ -1,2 +1,2 @@
 # Landing-Page
-LandingPage (backend, frontend e mobile)
+LandingPage (backend, frontend)
