@@ -2,6 +2,8 @@ import React from 'react';
 
 import './styles.css';
 
+import api from '../../services/api';
+
 import logoImg from '../../assets/logo.png';
 import deviceImg from '../../assets/device.png';
 import featureDeviceImg from '../../assets/feature-device.png';
@@ -25,6 +27,10 @@ import { MdPhoneIphone } from 'react-icons/md'
 import { IoIosSend } from 'react-icons/io'
 
 export default function Home() {
+  function hadleContact(e) {
+    e.preventDefault();
+  }
+
   return (
     <div>
       <header className="hero">
@@ -187,7 +193,7 @@ export default function Home() {
         <div className="center">
           <h2>Get int touch</h2>
           <div className="contact-info">
-            <form action="/users" method="POST">
+            <form onSubmit={hadleContact}>
               <input type="text" placeholder="Enter your name" />
               <input type="email" placeholder="Enter your email address" />
               <textarea placeholder="Enter your message" ></textarea>
@@ -225,3 +231,6 @@ export default function Home() {
     </div>
   );
 } 
+// 1:16
+
+
