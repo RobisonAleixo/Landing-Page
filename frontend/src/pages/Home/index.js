@@ -9,9 +9,20 @@ import featureicon1Img from '../../assets/featureicon1.png';
 import featureicon2Img from '../../assets/featureicon2.png';
 import featureicon3Img from '../../assets/featureicon3.png';
 import featureicon4Img from '../../assets/featureicon4.png';
+import saleBadgeImg from '../../assets/sale-badge.png';
 import { GoGear, GoBell } from 'react-icons/go'
 import { IoMdPower } from 'react-icons/io'
-import { FaApple, FaGooglePlay } from 'react-icons/fa'
+import { FaApple,
+         FaGooglePlay,
+         FaMapMarkerAlt,
+         FaFacebookSquare,
+         FaTwitter,
+         FaYoutube,
+         FaInstagram,
+         FaLinkedin
+       } from 'react-icons/fa'
+import { MdPhoneIphone } from 'react-icons/md'
+import { IoIosSend } from 'react-icons/io'
 
 export default function Home() {
   return (
@@ -142,6 +153,7 @@ export default function Home() {
             </div>
             <div className="plan-item">
               <div className="header-plans sale">
+                <img src={saleBadgeImg} alt="sale" className="saleImg" />
                 <h3>medium</h3>
                 <p>$45/month</p>
               </div>
@@ -170,6 +182,45 @@ export default function Home() {
 
         </div>
       </section>
+
+      <section className="contact">
+        <div className="center">
+          <h2>Get int touch</h2>
+          <div className="contact-info">
+            <form action="/users" method="POST">
+              <input type="text" placeholder="Enter your name" />
+              <input type="email" placeholder="Enter your email address" />
+              <textarea placeholder="Enter your message" ></textarea>
+              <button className="btn btn-plans" type="submit">Send</button>
+            </form>
+            <div className="address">
+              <h3>Address</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate esse dicta sint sequi laborum iusto distinctio aliquid maiores tempore odit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio id culpa a ex at similique necessitatibus animi, recusandae natus molestiae corrupti el!</p>
+              <ul>
+                <li><MdPhoneIphone size={20} color={"#56bbd5"} /> +1 555 555 555</li>
+                <li><FaMapMarkerAlt size={20} color={"#56bbd5"} /> 272 Private 7530 Rd, Call, TX</li>
+                <li><IoIosSend size={23} color={"#56bbd5"} /> info@appercompany.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div className="center">
+          <div className="footer-info">
+            <img src={logoImg} alt="Logo" />
+            <ul>
+              <li><FaFacebookSquare size={22} color={"#BBBABA"} /></li>
+              <li><FaTwitter size={22} color={"#BBBABA"} /></li>
+              <li><FaYoutube size={22} color={"#BBBABA"} /></li>
+              <li><FaInstagram size={22} color={"#BBBABA"} /></li>
+              <li><FaLinkedin size={22} color={"#BBBABA"} /></li>
+            </ul>
+            <p>Copyright 2020</p>
+          </div>
+        </div>
+      </footer>
 
     </div>
   );
