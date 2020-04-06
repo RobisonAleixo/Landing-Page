@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './styles.css';
 
@@ -14,21 +14,38 @@ import featureicon4Img from '../../assets/featureicon4.png';
 import saleBadgeImg from '../../assets/sale-badge.png';
 import { GoGear, GoBell } from 'react-icons/go'
 import { IoMdPower } from 'react-icons/io'
-import { FaApple,
-         FaGooglePlay,
-         FaMapMarkerAlt,
-         FaFacebookSquare,
-         FaTwitter,
-         FaYoutube,
-         FaInstagram,
-         FaLinkedin
-       } from 'react-icons/fa'
+import {
+  FaApple,
+  FaGooglePlay,
+  FaMapMarkerAlt,
+  FaFacebookSquare,
+  FaTwitter,
+  FaYoutube,
+  FaInstagram,
+  FaLinkedin
+} from 'react-icons/fa'
 import { MdPhoneIphone } from 'react-icons/md'
 import { IoIosSend } from 'react-icons/io'
 
 export default function Home() {
-  function hadleContact(e) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  async function hadleContact(e) {
     e.preventDefault();
+    const data = {
+      name,
+      email,
+      message
+    };
+
+    try {
+      await api.post('home', data);
+      alert('Mensagem enviada com sucesso!');
+    } catch (error) {
+      alert('Erro ao enviar a mensagem tente novamente!');
+    }
   }
 
   return (
@@ -194,9 +211,23 @@ export default function Home() {
           <h2>Get int touch</h2>
           <div className="contact-info">
             <form onSubmit={hadleContact}>
-              <input type="text" placeholder="Enter your name" />
-              <input type="email" placeholder="Enter your email address" />
-              <textarea placeholder="Enter your message" ></textarea>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                value={name}
+                onChange={e => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
+              <textarea
+                placeholder="Enter your message" 
+                value={message}
+                onChange={e => setMessage(e.target.value)}
+              ></textarea>
               <button className="btn btn-plans" type="submit">Send</button>
             </form>
             <div className="address">
@@ -230,7 +261,7 @@ export default function Home() {
 
     </div>
   );
-} 
+}
 // 1:16
 
 
